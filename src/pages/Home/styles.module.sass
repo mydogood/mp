@@ -1,0 +1,14 @@
+@import '../../common/styles/variables'
+
+.mainContainer
+  max-width: 1440px
+  width: 100%
+  display: flex
+  margin: 0 auto
+  flex-direction: row
+  flex-wrap: wrap
+  background-color: $background-section
+  @media (max-width: 1024px)
+    flex-direction: column
+    align-items: center
+    width: 100%

@@ -1,0 +1,254 @@
+@import '../../../common/styles/variables'
+
+.profileSection
+  width: 75%
+  max-width: 1440px
+  display: flex
+  justify-content: center
+  border: 1px solid transparent
+  margin: 2% auto
+  color: $text-color
+  background-color: $background-section
+  padding-bottom: 3%
+  @media (max-width: 1024px)
+    width: 95%
+  @media (max-width: 785px)
+    justify-content: space-around
+  @media (max-width: 610px)
+    flex-direction: column
+    align-items: center
+
+
+.avatarContainer
+  width: 26vw
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  margin: 5% 0 0 10%
+  @media (max-width: 610px)
+    width: 50vw
+    margin: 0
+
+
+  .defaultAvatar
+    max-width: 184px
+    width: 100%
+    @media (max-width: 610px)
+      margin: 5% auto
+
+  .userAvatar
+    max-width: 184px
+    width: 100%
+    object-fit: cover
+
+  .graySquare
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 45px
+    height: 184px
+    background-color: rgba(220, 225, 233, 1)
+    @media (max-width: 610px)
+
+
+  .avatarButtons
+    width: 184px
+    display: flex
+    justify-content: center
+    font-size: 16px
+    @media (max-width: 610px)
+      margin: 0 auto
+
+  .inputContainer
+    margin-top: 5%
+    .inputLabel
+      display: flex
+      flex-direction: column
+      align-items: center
+      .inputAvatar
+        display: none
+      .inputTitle
+        color: $text-color
+        text-decoration: underline
+        cursor: pointer
+
+
+  .removeAvatarBtn
+    border: none
+    color: $text-color
+    text-decoration: underline
+    background-color: initial
+    cursor: pointer
+    font-size: 16px
+
+.formContainer
+  max-width: 400px
+  width: 100%
+  @media (max-width: 785px)
+    max-width: 300px
+
+  .formContainerTitle
+    text-transform: uppercase
+  small
+    font-size: 14px
+    opacity: 50%
+  hr
+    opacity: 50%
+    margin-top: 7%
+  .formContainerSubTitle
+    text-transform: uppercase
+    margin-top: 8%
+
+  .inputContainer
+    display: flex
+    flex-direction: column
+    margin-bottom: 4%
+    .input
+      border: none
+      border-bottom: 1px solid $text-color
+      background-color: initial
+      margin: 2% 0
+      font-size: 14px
+      min-height: 20px
+
+    .inputLabel
+      font-size: 14px
+      opacity: 50%
+
+  .passwordDescription
+    font-size: 14px
+    opacity: 50%
+
+  .setPasswordBtn, .saveChangeBtn
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    max-width: 180px
+    border: 1px solid $text-color
+    background-color: initial
+    font-size: 16px
+    padding: 12px 20px
+    cursor: pointer
+  .saveChangeBtn
+    margin-top: 3%
+    background-color: $background-button-dark
+    color: white
+
+.setPasswordModal
+  margin: 2% 0
+  width: 100%
+  .setPasswordModalTitle
+    display: flex
+    align-items: center
+    h3
+      font-size: 26px
+      width: 100%
+      padding-left: 25px
+
+    .cancelBtn, .saveBtn
+      display: flex
+      justify-content: center
+      align-items: center
+      min-height: 35px
+      width: 100%
+      max-width: 104px
+      border: 1px solid $text-color
+      background-color: initial
+      font-size: 16px
+      padding: 12px 24px
+      cursor: pointer
+    .saveBtn
+      margin-left: 2%
+      background-color: $background-button-dark
+      color: white
+      &:disabled
+        opacity: 30%
+        cursor: auto
+
+.setPasswordModalForm
+  margin: 2% 4%
+
+  .passwordInputContainer
+    max-width: 585px
+    display: flex
+    flex-direction: column
+    .input
+      border: none
+      border-bottom: 1px solid $text-color
+      background-color: initial
+      margin: 2% 0
+      font-size: 14px
+      &:focus
+        outline: none
+        background-color: transparent !important
+    div
+      min-height: 24px
+      p
+        color: red
+        margin: 0
+        font-size: 14px
+
+    .inputLabel
+      font-size: 14px
+      opacity: 50%
+
+.setPasswordDrawer
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  height: 100dvh
+  .setPasswordDrawerTitle
+    font-size: 26px
+    margin-left: 2%
+
+  .setPasswordDrawerForm
+    margin: 2% 4%
+    height: 100dvh
+    position: relative
+    .passwordInputContainer
+      max-width: 585px
+      display: flex
+      flex-direction: column
+      .input
+        border: none
+        border-bottom: 1px solid $text-color
+        background-color: initial
+        margin: 5% 0
+        font-size: 14px
+      &:focus
+        outline: none
+        background-color: transparent !important
+      div
+        min-height: 24px
+        p
+          color: red
+          margin: 0
+          font-size: 14px
+
+  .setPasswordDrawerBtnContainer
+    position: absolute
+    bottom: 0
+    left: 35%
+    right: 35%
+    display: flex
+    justify-content: center
+    align-items: center
+    .cancelBtn, .saveBtn
+      display: flex
+      justify-content: center
+      align-items: center
+      min-height: 35px
+      width: 100%
+      border: 1px solid $text-color
+      background-color: initial
+      font-size: 16px
+      padding: 12px 70px
+      cursor: pointer
+    .saveBtn
+      margin-left: 5%
+      background-color: $background-button-dark
+      color: white
+      &:disabled
+        opacity: 30%
+        cursor: auto

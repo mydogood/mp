@@ -1,0 +1,396 @@
+@import '../../../common/styles/variables'
+
+.incentivesTableContainer
+  max-width: 1360px
+  margin-left: 2%
+  margin-right: 2%
+  margin-top: 2%
+  color: $text-color
+  background-color: $background-section
+
+  .table
+    margin: 0 2%
+    min-height: 400px
+
+  .table tr td
+    border-top: 2px solid $background-section !important
+    border-bottom: 2px solid $background-section !important
+    font-size: 16px !important
+
+  .table tr:hover td
+    cursor: pointer !important
+    border-bottom-color: #FAAC4E !important
+    border-top-color: #FAAC4E !important
+
+  th
+    border-bottom: 1px solid $text-color !important
+    color: $inactive-text
+    opacity: 50%
+    font-weight: 300 !important
+    text-transform: uppercase
+    & div:first-child
+      width: 25%
+      display: flex
+      align-items: center
+
+  .incentivesTableTitle
+    margin-left: 3%
+    font-size: 32px
+
+  .paginationSelectedIncentives
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-bottom: 1%
+
+  .incentivesTableHeaderContainer
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    border-bottom: 1px solid $border-table
+
+    @media (max-width: 610px)
+      flex-direction: column
+
+    .incentivesTitleContainer
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      margin: auto 2%
+
+      .incentivesTitle
+        padding-bottom: 1%
+
+      .sortBtn
+        margin-right: 20px
+
+      .filterBtn
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 8px
+        background-color: white
+        border: none
+        padding: 7px 14px
+        cursor: pointer
+        border: 1px solid $border-table
+        border-radius: 6px
+        font-size: 14px
+
+    .pointsBalanceContainer
+      display: flex
+      flex-direction: column
+      align-items: center
+      @media (max-width: 610px)
+        align-items: flex-end
+
+      .pointsBalanceLabel
+        text-transform: uppercase
+        margin-right: 20px
+
+      .suggestIncentiveText
+        margin: 0
+        text-decoration: underline
+
+  .incentivesItemsContainer
+    padding-top: 32px
+
+    .incentivesItemContainer
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+
+      .favoriteBtn
+        position: absolute
+        top: 10px
+        right: 10px
+
+      .addToCartBtn
+        width: 120px
+        margin-top: 16px
+        text-transform: uppercase
+        color: #FAAA4D
+
+      .cartItemActionBtn
+        width: 32px
+        text-align: center
+
+      .incentivesItemInfoContainer
+        padding-right: 10px
+
+        .incentivesItemPointsText
+          font-weight: bold
+        
+        incentivesItemWebsiteText
+        font-weight: bold
+
+      .divider
+        width: 100%
+        border: 1px solid $border-table
+
+  .loadMoreContainer
+    width: 100%
+    display: flex
+    justify-content: center
+    padding: 10px 0
+
+.incentiveDetailsDrawerContainer
+
+  .drawerTitle
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  h4
+    text-transform: uppercase
+  .incentiveDetailsList
+    list-style-type: none
+    padding-left: 0
+
+    .listItem
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin-top: 3%
+      color: $text-color
+      opacity: 70%
+  .charityRowContainer
+    display: flex
+    gap: 4px
+    align-items: center
+    justify-content: space-between
+
+    .formItem
+      flex: 1
+
+.mobileSelectedIncentiveListItemContainer
+  margin: 0 3%
+
+  .mobileListTitle
+    font-weight: 600
+    text-transform: uppercase
+    display: inline-block
+
+  .mobileListFirstColumn p
+    opacity: 70%
+
+
+
+  .mobileListSecondColumn p
+    display: flex
+    justify-content: center
+
+.incentivesContainer
+  margin: 3% 0 3% 2%
+  color: $text-color
+  @media (max-width: 1024px)
+    width: 90%
+
+  .incentivesTitleContainer
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: auto 2%
+
+    .incentivesTitle
+      padding-bottom: 1%
+
+    .filterBtn
+      display: flex
+      justify-content: center
+      align-items: center
+      gap: 8px
+      background-color: white
+      border: none
+      padding: 1% 2%
+      cursor: pointer
+      &:hover
+        border: 1px solid #FAAC4E
+        color: #FAAC4E
+
+  .redeemIncentivesListContainer
+    .redeemListItemContainer
+      width: 100%
+
+  .table
+    margin: 0 1%
+
+  
+  .table tr td
+    border-top: 2px solid $background-section !important
+    border-bottom: 2px solid $background-section !important
+
+  .table tr:hover td
+    cursor: pointer !important
+    border-bottom-color: #FAAC4E !important
+    border-top-color: #FAAC4E !important
+
+  .table th
+    border-bottom: 1px solid $text-color !important
+
+  .addBtn
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 90%
+    background-color: $underline-color
+    color: $text-color
+    border: 1px solid $border-table
+    cursor: pointer
+    &:hover
+      box-shadow: -2px -2px 3px 0px rgba(250,172,78,0.37)
+
+  .paginationIncentives
+    display: flex
+    justify-content: center
+    margin: 2% auto
+
+.overviewContainer
+  display: flex
+  flex-direction: column
+  gap: 20px
+  width: 30%
+  margin-left: 2%
+  margin-top: 2%
+  padding-left: 2%
+  &:nth-child(9) > div
+    font-size: 20px
+  @media (max-width: 1024px)
+    max-width: 900px
+    width: 90%
+    order: 2
+  @media (max-width: 610px)
+    margin: 0 auto
+    border: none
+
+  h2
+    font-size: 1.5em
+    color: $text-color
+    margin-bottom: 0
+    margin-top: 0
+
+  h4
+    text-transform: uppercase
+    font-size: 16px
+    color: $text-color
+    margin-bottom: 0
+    margin-top: 0
+
+
+  .listItem
+    color: $inactive-text
+    display: flex
+    justify-content: space-between
+    cursor: pointer
+    line-height: 16px
+    font-size: 14px
+    padding: 0.5%
+
+
+
+    &:hover .deleteIcon
+      color: $text-color
+      opacity: 1
+
+    .deleteIcon
+      opacity: 0
+
+  .totalList
+    color: $text-color
+    opacity: 70%
+    padding: 0 2%
+    bottom: auto
+    margin-top: 0
+
+    .totalListItem
+      display: flex
+      align-items: center
+      justify-content: space-between
+
+  .submitBtn
+    width: 95%
+    padding: 2%
+    margin: 0 auto 4% auto
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 10px
+    align-self: stretch
+    background-color: $text-color
+    color: white
+    border: none
+    cursor: pointer
+    transition: box-shadow 0.3s
+    &:hover
+      box-shadow: 0px -.2px 5px .5px rgba(17,31,51,1)
+    &:active
+      box-shadow: inset 0px 0px 8px 0px rgba(17, 31, 51, 0.82)
+    &:disabled
+      cursor: not-allowed
+
+  .yourPointsContainer
+    display: flex
+    flex-direction: column
+    border: 1px solid $border-table
+    padding: 16px
+
+    .yourPointsRow
+      display: flex
+      align-items: center
+      justify-content: space-between
+      width: 100%
+
+      p
+        margin-bottom: 0
+
+    .totalPoints
+      margin-top: 16px
+    
+    .submitContainer
+      display: flex
+      flex-direction: column
+      margin-top: 16px
+      align-items: center
+  
+      p
+        color: red
+        margin: 0
+
+.customizationBtnContainer
+  margin-top: 12px
+
+  .submitCustomizationBtn
+    margin: 0 auto
+    cursor: pointer
+    &:disabled
+      opacity: 95%
+      border-color: rgba(17, 31, 51, 0.3)
+      cursor: auto
+
+.cartIncentivesContainer
+  .cartListContainer
+    .cartListItemContainer
+      padding: 32px
+
+      .cartListItemInfoContainer
+        width: 100%
+        display: flex
+        justify-content: space-between
+        padding: 32px
+
+        .cartListItemPointsText
+          font-weight: bold
+
+      .cartListItemActionBtn
+        .cartItemActionBtn
+          width: 40px
+          text-align: center
+          font-size: 12px
+
+  .cartPointsContainer
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: 20px
+    border-top: 1px solid $border-table

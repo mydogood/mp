@@ -1,0 +1,33 @@
+@import '../../common/styles/variables'
+
+.tabsContainer
+  position: relative
+  z-index: 1
+
+.mainContainer
+  width: 60%
+  max-width: 1360px
+  border: 1px solid $border-table
+  margin: 2% auto
+  color: $text-color
+  background-color: $background-section
+  @media (max-width: 1468px)
+    width: 90%
+  @media (max-width: 805px)
+    width: 97%
+
+  .cartTab
+    padding: 0 10px 0 22px
+    @media (max-width: 805px)
+      padding: 0 10px
+
+  .scrollableContent
+    overflow-y: auto
+
+    .tabContent
+      padding: 20px
+      border: 1px solid #ddd
+      border-radius: 4px
+      background-color: #fff
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+      display: none

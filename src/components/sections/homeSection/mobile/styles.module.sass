@@ -1,0 +1,290 @@
+@import '../../../../common/styles/variables'
+
+.partnersContainer
+  width: 100%
+  min-height: 100dvh
+  margin: 0 auto
+  color: $text-color
+  padding: 0 5%
+  background-color: $background-section
+  li
+    border-top: 2px solid $background-section !important
+    border-bottom: 2px solid $background-section !important
+    &:hover
+      cursor: pointer !important
+      border-bottom-color: #FAAC4E !important
+      border-top-color: #FAAC4E !important
+
+
+
+  .partnersTitleContainer
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+    .partnerInfo
+      color: $inactive-text
+      margin-bottom: 3%
+      font-size: 14px
+
+    .filterBtn
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 100px
+      height: 40px
+      gap: 8px
+      background-color: white
+      border: none
+      padding: 1% 2%
+      margin-bottom: 3%
+      font-size: 16px
+
+    .requested
+      margin-top: 2%
+      font-size: 14px
+      &::before
+        content: '* ' !important
+        color: orange !important
+
+  .acceptedPartner
+    color: green
+    opacity: 50%
+  .requestedPartner
+    color: orange
+    opacity: 50%
+  .declinedPartner
+    color: red
+    opacity: 50%
+  .orangeStar
+    color: #FAAC4E
+    font-size: 7px
+    vertical-align: top
+
+.paginationPartnersMobile
+  display: flex
+  justify-content: center
+  margin-bottom: 3%
+  margin-top: 1%
+
+.incentivesContainer
+  width: 100%
+  height: 100dvh
+  margin: 0 auto
+  padding: 0 8%
+  color: $text-color
+  background-color: $background-section
+
+  .paginationIncentivesMobile
+    display: flex
+    justify-content: center
+    margin-bottom: 4%
+    background-color: $background-section
+
+div
+  font-size: 16px
+  @media (max-width: 422px)
+    font-size: 12px
+  @media (max-width: 335px)
+    font-size: 10px
+  @media (max-width: 290px)
+    font-size: 8px
+  @media (max-width: 245px)
+    font-size: 6px
+
+
+  .listItemContainer
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    .listFirstColumn
+      flex: 1
+      padding: 8px
+      color: $inactive-text
+      @media (max-width: 340px)
+        font-size: 10px
+      @media (max-width: 229px)
+        font-size: 8px
+
+      span
+        text-transform: uppercase
+        font-size: 16px
+        font-weight: 600
+        @media (max-width: 340px)
+          font-size: 10px
+
+      .addBtn
+        display: flex
+        justify-content: center
+        align-items: center
+        min-width: 80px
+        width: 30%
+        background-color: white
+        color: $text-color
+        border: 1px solid $border-table
+        &:hover
+          background-color: $underline-color
+
+
+
+    .listSecondColumn
+      flex: 1
+      padding-bottom: 3%
+      @media (max-width: 340px)
+        font-size: 8px
+        padding-bottom: 10%
+
+      p
+        text-align: right
+
+
+.modalContainer
+  height: 100%
+
+  .modalTitleContainer
+    display: flex
+    justify-content: flex-start
+
+  .filterContainer
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 100%
+
+
+    .dropdownContainer span
+      font-size: 14px
+
+    .dropdownContainer div
+      padding-left: 0 !important
+      padding-top: 8px
+      margin-top: 0
+      margin-bottom: 0
+      & ul li
+        padding-left: 0 !important
+        margin-top: 0
+        margin-bottom: 0
+
+
+    .filterList
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      margin-bottom: auto
+
+    .empty
+      display: flex
+      justify-content: center
+      align-items: center
+
+    .btnContainer
+      display: flex
+      justify-content: center
+      align-items: center
+      margin-top: auto
+      margin-bottom: 4%
+
+      .cancelBtn, .applyBtn
+        position: relative
+        margin-top: 3%
+        display: flex
+        justify-content: center
+        align-items: center
+        min-height: 35px
+        width: 100%
+        max-width: 150px
+        border: 1px solid $text-color
+        background-color: initial
+        font-size: 16px
+        padding: 12px 24px
+
+      .applyBtn
+        margin-left: 2%
+        background-color: $background-button-dark
+        color: white
+
+  .inputContainer
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    border-bottom: 1px solid black
+
+    //input
+    //  border-radius: 0 !important
+    //  border-bottom: 1px solid $text-color !important
+
+
+  .filterListContainer
+      width: 100%
+      max-width: 500px
+      display: flex
+      flex-direction: column
+      list-style-type: none
+      flex-wrap: wrap
+      margin: 0 auto
+      padding-left: 0
+
+      .controlFilterList
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        margin-top: 1%
+        padding: 0 10px
+        p
+          margin-right: 10%
+          font-size: 14px
+
+        button
+          font-size: 12px
+          max-width: 65px
+          max-height: 24px
+          border: none
+          background-color: white
+          text-decoration: underline
+          opacity: 50%
+          cursor: pointer
+          margin-left: 40%
+          @media (max-width: 610px)
+            margin-left: 25%
+          @media (max-width: 450px)
+            margin-left: 35%
+
+      .filterList
+        width: 100%
+        max-width: 200px
+        list-style-type: none
+        padding-left: 10px
+        padding-bottom: 0
+        padding-top: 0
+        margin-top: 0
+
+        li
+          width: 100%
+          min-width: 300px
+          display: flex
+          justify-content: space-between
+          align-items: center
+          font-size: 14px
+          border: 1px solid rgba(17, 31, 51, 0.1)
+          border-radius: 10px
+          color: $text-color
+          padding: 5px
+          margin-top: 2%
+          word-break: break-all
+          .listCloseIcon
+            font-size: 10px
+
+.filterBtn
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100px
+  height: 40px
+  gap: 8px
+  background-color: white
+  border: none
+  padding: 1% 2%
+  margin-bottom: 3%
+  font-size: 16px
+
