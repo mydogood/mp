@@ -358,7 +358,7 @@ const PartnerDrawer: FC<PartnerDrawerProps> = ({
           Stage_M__c: "Member Accepted",
           DQ_Response__c: partner.DQ_Response__c,
           Available_Dates_Times__c: interestTextAvailability,
-          Interest_in_Partner__c: interestText
+          Interest_in_Partner__c: partner.Interest_in_Partner__c || ""
         };
         endpoint = `sobjects/Meeting__c/${partner.key}`;
         break;
