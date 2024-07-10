@@ -40,8 +40,7 @@ const NoDQModal: FC<NoDQModalProps> = ({
                 Cancel
               </button>
             </div>
-            <small>   </small>
-            <small>If you'd like, please share your upcoming availability to meet with our partner below then click Submit. If not, just click Submit.</small>
+            <small>Share your upcoming availability below or just click Submit.</small>
             <div>
               <div className={styles.checkboxContainer}>
                 <Input
@@ -73,8 +72,7 @@ const NoDQModal: FC<NoDQModalProps> = ({
                 Cancel
               </button>
             </div>
-            <small>   </small>
-            <small>If you'd like, please share your upcoming availability to meet with our partner below then click Submit. If not, just click Submit.</small>
+            <small>Share your upcoming availability below or just click Submit.</small>
             <div>
               <div className={styles.checkboxContainer}>
                 <Input
