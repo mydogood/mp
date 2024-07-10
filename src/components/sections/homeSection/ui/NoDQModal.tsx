@@ -39,12 +39,12 @@ const NoDQModal: FC<NoDQModalProps> = ({
                 Cancel
               </button>
             </div>
-            <small>Please share your upcoming availability to meet with our partner:</small>
             <div>
+            <small>Please share your upcoming availability to meet with our partner:</small>
               <div className={styles.checkboxContainer}>
                 <Input
                   bordered={false}
-                  placeholder={"Please share your upcoming availability to meet with our partner"}
+                  placeholder={" "}
                   value={interestTextAvailability}
                   onChange={(e) => setInterestTextAvailability(e.target.value)}
                 />
@@ -63,7 +63,6 @@ const NoDQModal: FC<NoDQModalProps> = ({
         >
           <section className={styles.modalContainer}>
             <div className={styles.modalTitleContainer}>
-              <h3>Please share your upcoming availability to meet with our partner:</h3>
               <button onClick={onRequest} className={styles.declineSubBtn}>
                 Submit
               </button>
@@ -72,6 +71,7 @@ const NoDQModal: FC<NoDQModalProps> = ({
               </button>
             </div>
             <div>
+            <small>Please share your upcoming availability to meet with our partner:</small>
               <div className={styles.checkboxContainer}>
                 <Input
                   bordered={false}
