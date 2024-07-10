@@ -55,8 +55,17 @@ const AcceptRequestModal: FC<AcceptModalProps> = ({
         >
           <section className={styles.mobileRequestModalContainer}>
             <div className={styles.modalTitleContainer}>
-              <h3>Request to meet</h3>
+              <h3>Please answer the following question before moving forward with
+              this acceptance:</h3>
             </div>
+            <div className={styles.modalButtonsContainer}>
+                <button onClick={onAccept} className={styles.declineSubBtn}>
+                  Submit
+                </button>
+                <button onClick={OnAcceptCancel} className={styles.cancelBtn}>
+                  Cancel
+                </button>
+              </div>
             <small>{acceptMeetings?.question}</small>
             <div>
               <div className={styles.checkboxContainer}>
@@ -84,6 +93,11 @@ const AcceptRequestModal: FC<AcceptModalProps> = ({
             <div>
               {selectedCheckbox === "Yes" && (
                 <>
+                  <div>
+              <small>
+                *****
+              </small>
+            </div>
                   <div>
                   <small>Please share your upcoming availability to meet with our partner:</small>
                     <div className={styles.checkboxContainer}>
@@ -155,6 +169,11 @@ const AcceptRequestModal: FC<AcceptModalProps> = ({
             <div>
               {selectedCheckbox === "Yes" && (
                 <>
+                <div>
+              <small>
+                *****
+              </small>
+            </div>
                   <div>
                   <small>Please share your upcoming availability to meet with our partner:</small>
                     <div className={styles.checkboxContainer}>
