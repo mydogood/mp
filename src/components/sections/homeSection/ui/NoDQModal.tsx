@@ -45,7 +45,7 @@ const NoDQModal: FC<NoDQModalProps> = ({
               <div className={styles.checkboxContainer}>
                 <Input
                   bordered={false}
-                  placeholder={" "}
+                  placeholder={"Enter availability here"}
                   value={interestTextAvailability}
                   onChange={(e) => setInterestTextAvailability(e.target.value)}
                 />
@@ -62,25 +62,27 @@ const NoDQModal: FC<NoDQModalProps> = ({
           closeIcon={false}
           open={noDQModalState}
         >
-          <section className={styles.modalContainer}>
-            <div className={styles.modalTitleContainer}>
-            <h3>Availability to Meet</h3>
-              <button onClick={onRequest} className={styles.declineSubBtn}>
-                Submit
-              </button>
-              <button onClick={OnDQModalCancel} className={styles.cancelBtn}>
-                Cancel
-              </button>
-            </div>
-            <small>Share your upcoming availability below or just click Submit.</small>
-            <div>
-              <div className={styles.checkboxContainer}>
-                <Input
-                  bordered={false}
-                  placeholder={" "}
-                  value={interestTextAvailability}
-                  onChange={(e) => setInterestTextAvailability(e.target.value)}
-                />
+          <section className={styles.modalContainer}><div>
+                  <h4>Share your upcoming availability below or just click Submit:</h4> </div>
+                    <div className={styles.checkboxContainer}>
+                      <Input
+                        bordered={false}
+                        placeholder={"Enter here"}
+                        value={interestTextAvailability}
+                        onChange={(e) =>
+                          setInterestTextAvailability(e.target.value)
+                        }
+                      />
+                    </div></section>
+                    <div>&nbsp;</div><section className={styles.modalContainer}><div className={styles.modalTitleContainer}>
+            
+              <div className={styles.modalButtonsContainer}>
+                <button onClick={onRequest} className={styles.declineSubBtn}>
+                  Submit
+                </button>
+                <button onClick={OnDQModalCancel} className={styles.cancelBtn}>
+                  Cancel
+                </button>
               </div>
             </div>
           </section>

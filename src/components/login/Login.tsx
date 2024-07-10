@@ -84,7 +84,7 @@ const Login: FC = () => {
                             className={styles.formItem}
                             label="Email"
                             name="email"
-                            rules={[{ message: 'Please input your username!' }]}
+                            rules={[{ message: 'Please input your username' }]}
                         >
                             <Input placeholder={'Enter your email associated with DoGood'} onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
                         </Form.Item>

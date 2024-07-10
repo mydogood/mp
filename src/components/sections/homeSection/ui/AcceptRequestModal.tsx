@@ -15,6 +15,8 @@ interface AcceptModalProps {
   OnAcceptCancel: () => void;
   setInterestTextAvailability: (value: string) => void;
   interestTextAvailability: string;
+  interestText: string;
+  setInterestText: (value: string) => void;
   onCheckboxChange: (value: string) => void;
   selectedCheckbox: string | null;
   acceptMeetings: partnerQuestion | null;
@@ -27,6 +29,8 @@ const AcceptRequestModal: FC<AcceptModalProps> = ({
   OnAcceptCancel,
   interestTextAvailability,
   setInterestTextAvailability,
+  setInterestText,
+  interestText,
   onCheckboxChange,
   selectedCheckbox,
   acceptMeetings,
@@ -55,7 +59,7 @@ const AcceptRequestModal: FC<AcceptModalProps> = ({
         >
           <section className={styles.mobileRequestModalContainer}>
             <div className={styles.modalTitleContainer}>
-              <h3>Please answer the following question before moving forward with
+              <h3>Please answer the following before moving forward with
               this acceptance:</h3>
             </div>
             <div className={styles.modalButtonsContainer}>
@@ -94,16 +98,22 @@ const AcceptRequestModal: FC<AcceptModalProps> = ({
               {selectedCheckbox === "Yes" && (
                 <>
                   <div>
-              <small>
-                *****
-              </small>
+              <small>Please share why you would like to meet with this partner:</small>
+              <div className={styles.mobileInputContainer}>
+              <Input
+                bordered={false}
+                placeholder={" "}
+                value={interestText}
+                onChange={(e) => setInterestText(e.target.value)}
+              />
+            </div>
             </div>
                   <div>
                   <small><b>Share your upcoming availability below or just click Submit.</b></small>
                     <div className={styles.checkboxContainer}>
                       <Input
                         bordered={false}
-                        placeholder={" "}
+                        placeholder={"Enter availability here"}
                         value={interestTextAvailability}
                         onChange={(e) =>
                           setInterestTextAvailability(e.target.value)
@@ -128,20 +138,11 @@ const AcceptRequestModal: FC<AcceptModalProps> = ({
           onCancel={onAccept}
         >
           <section className={styles.modalContainer}>
-            <div className={styles.modalTitleContainer}>
-              <h3>
-                Please answer the following question before moving forward with
-                this acceptance:
-              </h3>
-              <div className={styles.modalButtonsContainer}>
-                <button onClick={onAccept} className={styles.declineSubBtn}>
-                  Submit
-                </button>
-                <button onClick={OnAcceptCancel} className={styles.cancelBtn}>
-                  Cancel
-                </button>
-              </div>
-            </div>
+            
+            <div>
+            <h4>
+                Please answer the following before moving forward with this acceptance:</h4></div>
+                <section className={styles.modalContainer}>
             <small>{acceptMeetings?.question}</small>
             <div>
               <div className={styles.checkboxContainer}>
@@ -160,35 +161,54 @@ const AcceptRequestModal: FC<AcceptModalProps> = ({
                   No
                 </Checkbox>
               </div>
-            </div>
+            </div><div>&nbsp;</div>
             <div>
               <small>
                 Please note: if you answer "No", this meeting will be declined.
               </small>
-            </div>
-            <div>
+            </div></section></section>
+            <section className={styles.modalContainer}>
+              <div>
               {selectedCheckbox === "Yes" && (
                 <>
-                <div>
-              <small>
-                *****
-              </small>
-            </div>
-                  <div>
-                  <small><b>Share your upcoming availability below or just click Submit.</b></small>
+                <section className={styles.modalContainer}><div>
+                <h4>
+              Please share why you would like to meet with this partner:</h4> </div>
+            
+              <div className={styles.checkboxContainer}>
+                <Input
+                  bordered={false}
+                  placeholder={"Enter here"}
+                  value={interestText}
+                  onChange={(e) => setInterestText(e.target.value)}
+                />
+              </div></section>
+              <section className={styles.modalContainer}><div>
+                  <h4>Share your upcoming availability below or just click Submit:</h4> </div>
                     <div className={styles.checkboxContainer}>
                       <Input
                         bordered={false}
-                        placeholder={" "}
+                        placeholder={"Enter here"}
                         value={interestTextAvailability}
                         onChange={(e) =>
                           setInterestTextAvailability(e.target.value)
                         }
                       />
-                    </div>
-                  </div>
+                    </div></section>
+                 
                 </>
               )}
+            </div></section>
+         <div>&nbsp;</div><section className={styles.modalContainer}><div className={styles.modalTitleContainer}>
+            
+              <div className={styles.modalButtonsContainer}>
+                <button onClick={onAccept} className={styles.declineSubBtn}>
+                  Submit
+                </button>
+                <button onClick={OnAcceptCancel} className={styles.cancelBtn}>
+                  Cancel
+                </button>
+              </div>
             </div>
           </section>
         </Modal>

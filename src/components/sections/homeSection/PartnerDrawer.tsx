@@ -356,9 +356,9 @@ const PartnerDrawer: FC<PartnerDrawerProps> = ({
       case "Accepted":
         updatedFields = {
           Stage_M__c: "Member Accepted",
-          // Sweepstakes_Type__c: partner
           DQ_Response__c: partner.DQ_Response__c,
           Available_Dates_Times__c: interestTextAvailability,
+          Interest_in_Partner__c: interestText
         };
         endpoint = `sobjects/Meeting__c/${partner.key}`;
         break;
@@ -394,7 +394,6 @@ const PartnerDrawer: FC<PartnerDrawerProps> = ({
 
         updatedFields = {
           RecordTypeId: "01236000000OoHj",
-          // RecordTypeId: "a0EHq00000yjyO4",
           Stage_M__c: "Requested by Member",
           Member1__c: memberId.Member__c,
           Member_Account__c: memberId.AccountId,
@@ -448,6 +447,8 @@ const PartnerDrawer: FC<PartnerDrawerProps> = ({
             OnAcceptCancel={handleCancelAccept}
             interestTextAvailability={interestTextAvailability}
             setInterestTextAvailability={setInterestTextAvailability}
+            interestText={interestText}
+            setInterestText={setInterestText}
             onCheckboxChange={handleCheckboxSelect}
             selectedCheckbox={selectedCheckbox}
             acceptMeetings={acceptMeetings}
