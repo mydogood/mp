@@ -160,7 +160,7 @@ const AcceptRequestModal: FC<AcceptModalProps> = ({
                     <div className={styles.checkboxContainer}>
                       <Input
                         bordered={false}
-                        placeholder={""}
+                        placeholder={" "}
                         value={interestTextAvailability}
                         onChange={(e) =>
                           setInterestTextAvailability(e.target.value)
