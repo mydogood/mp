@@ -99,7 +99,7 @@ const AcceptRequestModal: FC<AcceptModalProps> = ({
               </small>
             </div>
                   <div>
-                  <small>Share your upcoming availability below or just click Submit.</small>
+                  <small><b>Share your upcoming availability below or just click Submit.</b></small>
                     <div className={styles.checkboxContainer}>
                       <Input
                         bordered={false}
@@ -175,7 +175,7 @@ const AcceptRequestModal: FC<AcceptModalProps> = ({
               </small>
             </div>
                   <div>
-                  <small>Share your upcoming availability below or just click Submit.</small>
+                  <small><b>Share your upcoming availability below or just click Submit.</b></small>
                     <div className={styles.checkboxContainer}>
                       <Input
                         bordered={false}
