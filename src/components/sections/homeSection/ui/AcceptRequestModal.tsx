@@ -155,12 +155,12 @@ const AcceptRequestModal: FC<AcceptModalProps> = ({
             <div>
               {selectedCheckbox === "Yes" && (
                 <>
-                  <p>Provide some availability:</p>
+                  <p>Please share your upcoming availability to meet with our partner:</p>
                   <div>
                     <div className={styles.checkboxContainer}>
                       <Input
                         bordered={false}
-                        placeholder={"Provide some availability"}
+                        placeholder={"Please share your upcoming availability to meet with our partner"}
                         value={interestTextAvailability}
                         onChange={(e) =>
                           setInterestTextAvailability(e.target.value)
