@@ -76,7 +76,7 @@ const NoDQModal: FC<NoDQModalProps> = ({
               <div className={styles.checkboxContainer}>
                 <Input
                   bordered={false}
-                  placeholder={"Please share your upcoming availability to meet with our partner"}
+                  placeholder={""}
                   value={interestTextAvailability}
                   onChange={(e) => setInterestTextAvailability(e.target.value)}
                 />
