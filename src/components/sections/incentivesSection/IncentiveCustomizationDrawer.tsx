@@ -37,14 +37,14 @@ const IncentiveCustomizationDrawer: FC<IncentiveCustomizationDrawerProps> = ({
       width={isMobile ? "100%" : isTablet ? "60%" : "30%"}
       onClose={() => onClose()}
       open={isOpen}
+      maskClosable={false}
     >
       <section className={styles.incentiveDetailsDrawerContainer}>
         <div className={styles.drawerTitle}>
-          <h3>Item Customizations</h3>
-          <CloseOutlined onClick={() => onClose()} />
+          <h3>This item has color/size customizations. Please enter them below and click Submit.</h3>
         </div>
         <Input
-          placeholder="Item Customization"
+          placeholder="Enter here"
           value={inputValue}
           onChange={handleInputChange}
         />
